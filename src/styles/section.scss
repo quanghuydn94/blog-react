@@ -1,0 +1,143 @@
+$itemFontSize: 1.3rem;
+$fontWeight: 700;
+$colorTxt: #3D6889;
+
+.section {
+    font-weight: $fontWeight;
+    font-family: "Noto Sans", sans-serif;
+
+    &__bg {
+        position: relative;
+        height: 100vh;
+        background-image: url(http://mauweb.monamedia.net/valeo/wp-content/uploads/2019/09/bg-image-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 60% 40%;
+    }
+
+    &__content {
+        &--animation {
+            animation: content 1.5s;
+        }
+    }
+
+    &__title {
+        margin-top: 6%;
+        padding: 50px 0px 20px 20px;
+        border-bottom: 1px solid #dee2e6;
+
+        &--color {
+            color: $colorTxt;
+            font-weight: $fontWeight;
+        }
+    }
+
+    &__text--fontSize {
+        font-size: 1.1rem;
+    }
+
+    &__row {
+        padding: 25px 0 10px 10px;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    &__row:last-child {
+        border: none;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+
+        img {
+            width: 60px;
+        }
+
+        &--fontSize {
+            font-size: $itemFontSize;
+            margin-left: 20px;
+            color: $colorTxt;
+        }
+    }
+}
+
+@keyframes content {
+    from {
+        right: -50px;
+        opacity: 0;
+    }
+
+    to {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section {
+        font-weight: $fontWeight;
+        font-family: "Noto Sans", sans-serif;
+
+        &__bg {
+            background-color: #F1F5F8;
+            height: auto;
+        }
+
+        &__content {
+            padding-left: 0px !important;
+        }
+
+        &__title h2 {
+            font-size: 30px;
+        }
+
+        &__text--fontSize {
+            font-size: 1rem;
+        }
+
+        &__item {
+            img {
+                width: 60px;
+            }
+
+            &--fontSize {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .section {
+        &__bg {
+            height: auto;
+        }
+
+        &__content {
+            padding-left: 0px !important;
+        }
+
+        &__title {
+            margin-top: 2%;
+        }
+
+        &__item {
+            img {
+                width: 60px;
+            }
+
+            &--fontSize {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .section {
+        &__bg {
+            height: 60vh;
+            background-position: center;
+        }
+
+    }
+}
