@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+.containerDetail {
+  width: 90%;
+  font-family: "Montserrat", sans-serif;
+  margin: 60px auto 30px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .detailTitle {
+    background-image: url("https://cdn.pixabay.com/photo/2021/11/16/18/10/nature-6801719_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 100px;
+    color: white;
+    text-transform: capitalize;
+  }
+  .detailContent {
+    padding: 20px;
+    text-align: left;
+    color: #2468a2;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    p::first-letter {
+      text-transform: uppercase;
+    }
+    img {
+      width: 100%;
+      margin: 20px 0;
+    }
+    button {
+      margin-top: 50px;
+      outline: none;
+      border: 0.5px solid crimson;
+      span a {
+        color: crimson;
+      }
+      &:hover {
+        background: crimson;
+        span a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

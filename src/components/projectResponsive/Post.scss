@@ -1,0 +1,49 @@
+.postCard {
+  height: 500px;
+  border: 4px solid transparent;
+  border-radius: 5px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-gap: 50px;
+  align-items: center;
+
+  .image {
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    .cardImage {
+      height: 300px;
+      border-radius: 5px;
+      background-size: cover;
+    }
+  }
+
+  .cardContent {
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    text-align: end;
+    color: white;
+    button {
+      border: 1px solid white;
+      color: white;
+      margin-left: 10px;
+      &:hover {
+        color: #6f99bd;
+        background: white;
+        text-shadow: 2px 2px 5px rgb(172, 144, 150);
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 5px 5px 5px rgba(255, 255, 255, 0.5);
+    .cardContent {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    .image {
+      transform: scale(1.2);
+    }
+  }
+}

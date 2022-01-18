@@ -1,0 +1,145 @@
+.container {
+  .cardMedia {
+    height: 450px;
+    border-radius: 5px;
+    padding-top: 10%;
+    margin-bottom: 20px;
+    text-align: center;
+
+    .title1 {
+      display: block;
+      font-size: 3rem;
+      color: white;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: transparent;
+      position: relative;
+      animation: text 3s linear;
+    }
+    .title2 {
+      color: bisque;
+      font-size: 1.5rem;
+    }
+  }
+  .titlePost {
+    position: relative;
+    padding-top: 30px;
+    margin-top: 50px;
+    z-index: 2;
+    top: -20px;
+    transform: translateY(-100%);
+    h2 {
+      cursor: pointer;
+      color: white;
+      font-weight: 600;
+      position: absolute;
+      transform: translate(-50% -50%);
+      font-size: 2em;
+      &::after {
+        content: "";
+        height: 5px;
+        background: linear-gradient(-45deg, #b5d6ca, #e09797, #e6e1a6);
+        border-radius: 5px;
+        width: 100%;
+        bottom: 0px;
+        transform: translateY(100%);
+        left: 0;
+        position: absolute;
+      }
+    }
+    h2:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 1px #c2f0f5;
+    }
+    h2:nth-child(2) {
+      color: #f3efef;
+      animation: textAni 4s ease-in-out infinite;
+    }
+  }
+  .rowOne {
+    display: grid;
+    grid-template-areas:
+      "one one one two two"
+      "one one one three four";
+    grid-gap: 10px;
+    background-color: transparent;
+    height: 500px;
+
+    .colOne {
+      grid-area: one;
+    }
+    .colTwo {
+      grid-area: two;
+    }
+    .colThree {
+      grid-area: three;
+    }
+    .colFour {
+      grid-area: four;
+    }
+  }
+}
+@keyframes textAni {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 46%,
+      13% 51%,
+      18% 55%,
+      28% 55%,
+      36% 51%,
+      45% 47%,
+      57% 46%,
+      68% 51%,
+      75% 56%,
+      87% 57%,
+      96% 55%,
+      99% 98%,
+      0% 99%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 46%,
+      14% 40%,
+      22% 39%,
+      33% 39%,
+      41% 43%,
+      45% 47%,
+      56% 55%,
+      66% 56%,
+      75% 46%,
+      89% 44%,
+      100% 43%,
+      99% 98%,
+      0% 99%
+    );
+  }
+}
+@keyframes text {
+  0% {
+    color: black;
+    opacity: 0.8;
+    background: rgb(94, 93, 93);
+    margin-bottom: -40px;
+  }
+  50% {
+    opacity: 1;
+    letter-spacing: 1rem;
+    margin-bottom: -40px;
+    background: rgb(216, 213, 213);
+  }
+  85% {
+    opacity: 1;
+    letter-spacing: 0.6rem;
+    margin-bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 0;
+    background: transparent;
+  }
+}

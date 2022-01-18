@@ -1,0 +1,80 @@
+.postItem {
+  background: white;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 5px 5px rgba(255, 255, 255, 0.5);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  .boxImage {
+    height: fit-content;
+    padding: 0;
+    width: 100%;
+    .postItemImage {
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        height: calc(100% - 10px);
+        width: 0;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        top: 5px;
+        left: 50%;
+        transition: all 0.2s linear;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: calc(100% - 10px);
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+        top: 50%;
+        left: 5px;
+        transition: all 0.2s linear;
+      }
+      &:hover {
+        &::after {
+          width: calc(100% - 10px);
+          left: 5px;
+          height: calc(100% - 10px);
+        }
+        &::before {
+          top: 5px;
+          height: calc(100% - 10px);
+        }
+      }
+    }
+  }
+  .postItemContent {
+    padding: 10px;
+    color: #333;
+    transition: all 0.3s linear;
+    h6 {
+      font-family: "Lucida Sans Unicode", sans-serif;
+      margin-bottom: 5px;
+    }
+    p {
+      font-family: "Lucida Sans Unicode", sans-serif;
+    }
+    button {
+      color: crimson;
+      font-size: 0.7em;
+      outline: white;
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      button {
+        margin-left: 5px;
+      }
+      h6,
+      p {
+        color: #e48989;
+      }
+    }
+  }
+}

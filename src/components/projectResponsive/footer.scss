@@ -1,0 +1,25 @@
+.footer {
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #f1f1f1;
+  .item {
+    color: #2468a2;
+    transition: all 0.5s linear;
+    font-family: "Open Sans", serif;
+    h6 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      text-align: center;
+      border: 0.5px solid #2468a2;
+      background: rgba(255, 255, 255, 0.8);
+      margin-bottom: 10px;
+    }
+    p {
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+    &:hover {
+      color: crimson;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.container {
+  color: white;
+  padding-bottom: 20px;
+  .divider {
+    margin: 20px 0;
+    padding: 0 20px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: rgb(247, 241, 241, 0.5);
+    transition: all 0.5s linear;
+    cursor: pointer;
+    &:hover {
+      background: white;
+      color: #e48989;
+    }
+    &:nth-child(1) {
+      margin-top: 70px;
+    }
+  }
+}

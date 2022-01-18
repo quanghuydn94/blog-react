@@ -5,6 +5,11 @@
 }
 
 .App {
-  color: #8CB0BB;
+  color: #8cb0bb;
   font-family: "Noto Sans", sans-serif;
+  background: linear-gradient(-45deg, #9da2b3, #a5e0f1, #855d88, #ddd6d7);
+  background-position: 500% 300%;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
