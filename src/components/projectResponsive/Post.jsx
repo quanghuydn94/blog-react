@@ -14,7 +14,11 @@ const Post = ({ post }) => {
   return (
     <Box className="postCard">
       <Box className="image">
-        <CardMedia className="cardImage" image={post.url} title={post.title} />
+        <CardMedia
+          className="cardImage"
+          image={post.url.img3}
+          title={post.title}
+        />
       </Box>
       <Box className="cardContent">
         <Typography gutterBottom variant="h5">

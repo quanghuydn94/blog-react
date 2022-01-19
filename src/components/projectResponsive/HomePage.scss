@@ -1,8 +1,11 @@
-.container {
+.containerHome {
+  width: 100%;
+  margin-top: 65px;
+  padding: 0 20px;
   .cardMedia {
     height: 450px;
     border-radius: 5px;
-    padding-top: 10%;
+    padding-top: 15%;
     margin-bottom: 20px;
     text-align: center;
 
@@ -62,22 +65,22 @@
   .rowOne {
     display: grid;
     grid-template-areas:
-      "one one one two two"
-      "one one one three four";
+      "one one two two"
+      "one one three four";
     grid-gap: 10px;
     background-color: transparent;
     height: 500px;
 
-    .colOne {
+    .col1 {
       grid-area: one;
     }
-    .colTwo {
+    .col2 {
       grid-area: two;
     }
-    .colThree {
+    .col3 {
       grid-area: three;
     }
-    .colFour {
+    .col4 {
       grid-area: four;
     }
   }
@@ -141,5 +144,44 @@
     opacity: 1;
     margin-bottom: 0;
     background: transparent;
+  }
+}
+@media screen and(max-width: 1280px) {
+  .containerHome {
+    max-width: 100%;
+    margin-top: 0;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .containerHome {
+    width: 100%;
+    padding: 20px;
+    margin-top: 0;
+    .cardMedia {
+    }
+    .rowOne {
+      grid-template-areas:
+        "one one two two"
+        "three three four four";
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .containerHome {
+    width: 100%;
+    .cardMedia {
+      margin-top: 5px;
+    }
+    .rowOne {
+      display: block;
+      height: auto;
+      .col1,
+      .col2,
+      .col3 {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

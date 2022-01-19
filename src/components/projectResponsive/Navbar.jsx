@@ -15,6 +15,9 @@ import { NavLink } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   appbar: {
     background: "#EEEEEE",
+    [theme.breakpoints.down("md")]: {
+      position: "sticky",
+    },
   },
   toolbar: {
     display: "flex",
@@ -68,22 +71,19 @@ const useStyles = makeStyles((theme) => ({
   },
   cancel: {
     right: "0",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
   },
   searchButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
   },
   icons: {
     display: (props) => (props.open ? "none" : "flex"),
     alignItems: "center",
-  },
-  badge: {
-    marginRight: theme.spacing(2),
   },
 }));
 const Navbar = () => {
@@ -96,7 +96,7 @@ const Navbar = () => {
           <Avatar src="https://cdn.thukyluat.vn/nhch-images//CauHoi_Hinh/9eb6abaa-8cda-456c-ad66-26ba4da23ffe.jpg" />
         </Typography>
         <Typography variant="h6" className={classes.logoSm}>
-          Imo
+          <Avatar src="https://cdn.thukyluat.vn/nhch-images//CauHoi_Hinh/9eb6abaa-8cda-456c-ad66-26ba4da23ffe.jpg" />
         </Typography>
 
         <div>
@@ -132,12 +132,7 @@ const Navbar = () => {
             className={classes.searchButton}
             onClick={() => setOpen(true)}
           />
-          <Badge badgeContent={4} color="secondary" className={classes.badge}>
-            <Mail />
-          </Badge>
-          <Badge badgeContent={2} color="secondary" className={classes.badge}>
-            <Notifications />
-          </Badge>
+
           <Avatar
             alt="R Sharp"
             src="https://images.pexels.com/photos/10542808/pexels-photo-10542808.jpeg?cs=srgb&dl=pexels-beepin-10542808.jpg&fm=jpg"

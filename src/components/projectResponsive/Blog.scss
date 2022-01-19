@@ -1,6 +1,7 @@
-.container {
+.containerBlog {
   color: white;
-  padding-bottom: 20px;
+  padding: 0 20px 20px 20px;
+  margin-top: 60px;
   .divider {
     margin: 20px 0;
     padding: 0 20px;
@@ -16,8 +17,20 @@
       background: white;
       color: #e48989;
     }
-    &:nth-child(1) {
-      margin-top: 70px;
-    }
+  }
+}
+@media screen and(max-width: 1280px) {
+  .containerBlog {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .containerBlog {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .containerBlog {
+    margin-top: 0;
   }
 }

@@ -1,25 +1,46 @@
 .footer {
   padding: 20px 0;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #f1f1f1;
+  background: #0f0f0f;
+  width: 100%;
+  position: relative;
+  bottom: 0;
   .item {
     color: #2468a2;
     transition: all 0.5s linear;
     font-family: "Open Sans", serif;
+    .logoFooter {
+      display: flex;
+      justify-content: center;
+      padding: 0 0 30px;
+    }
     h6 {
       text-transform: uppercase;
       font-size: 1rem;
       text-align: center;
-      border: 0.5px solid #2468a2;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.3);
       margin-bottom: 10px;
     }
     p {
       margin-left: 5px;
       margin-bottom: 10px;
+      background: linear-gradient(90deg, #00dbde, #fd6cea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.5s linear;
+      svg {
+        color: #7c9cdb;
+        transition: all 0.5s linear;
+      }
+      &:hover {
+        svg {
+          color: white;
+          transform: scale(1.2);
+        }
+      }
     }
-    &:hover {
-      color: crimson;
+    .category:hover {
+      letter-spacing: 0.4em;
+      cursor: pointer;
     }
   }
 }

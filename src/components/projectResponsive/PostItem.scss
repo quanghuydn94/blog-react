@@ -60,6 +60,9 @@
     }
     p {
       font-family: "Lucida Sans Unicode", sans-serif;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     button {
       color: crimson;
@@ -75,6 +78,19 @@
       p {
         color: #e48989;
       }
+    }
+  }
+}
+@media screen and(max-width: 600px) {
+  .postItem {
+    width: 100%;
+    .boxImage {
+      height: fit-content;
+      .postItemImage {
+      }
+    }
+    .postItemContent {
+      width: 100%;
     }
   }
 }

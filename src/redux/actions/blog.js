@@ -1,6 +1,7 @@
 import { ActionTypes } from "../contants/action-types";
 import fashions from "../contants/dataFashion";
 import travels from "../contants/dataTravels";
+import foods from "../contants/dataFoods";
 
 export const fetchPosts = () => (dispatch) => {
   dispatch({
@@ -30,6 +31,18 @@ export const fetchFashionPosts = () => {
 export const aFashionPost = (id) => {
   return {
     type: ActionTypes.FETCH_FASHION_POST,
+    payload: id,
+  };
+};
+export const fetchFoodPosts = () => (dispatch) => {
+  dispatch({
+    type: ActionTypes.FETCH_FOOD_POSTS,
+    payload: foods,
+  });
+};
+export const aFoodPost = (id) => {
+  return {
+    type: ActionTypes.FETCH_FOOD_POST,
     payload: id,
   };
 };

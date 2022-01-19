@@ -20,9 +20,9 @@ export const Blog = () => {
     document.title = "Blog";
   }, []);
   return (
-    <div className="container">
+    <div className="containerBlog">
       <Grid container justifyContent="center">
-        <Grid item sm={12} xs={9}>
+        <Grid item sm={12} xs={12}>
           <Box className="divider">
             <Typography>Travels</Typography>
           </Box>
@@ -31,13 +31,13 @@ export const Blog = () => {
             <Typography>Fashion</Typography>
           </Box>
           <Grid container justifyContent="space-between">
-            <Grid item sm={4}>
+            <Grid item md={4} sm={5} xs={12}>
               <PostItem fashions={fashionCol1} />
             </Grid>
-            <Grid item sm={3}>
+            <Grid item md={3} sm={6} xs={12}>
               <PostItem fashions={fashionCol2} />
             </Grid>
-            <Grid item sm={4}>
+            <Grid item md={4} sm={12} xs={12}>
               <PostItem fashions={fashionCol3} />
             </Grid>
           </Grid>

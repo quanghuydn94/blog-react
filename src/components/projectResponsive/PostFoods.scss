@@ -1,11 +1,14 @@
 .newsCard {
   height: 100%;
+  padding: 2px;
   .newsImage {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-position: 30% 50%;
+    transition: all 0.5s ease;
     .newsContent {
       color: white;
       text-align: center;
@@ -27,6 +30,7 @@
       }
     }
     &:hover {
+      transform: scale(1.02);
       .newsContent p {
         opacity: 1;
       }
@@ -35,5 +39,17 @@
         left: 0;
       }
     }
+  }
+}
+@media screen and(max-width: 960px) {
+  .newsCard {
+    .newsImage {
+      justify-content: center;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .newsCard {
+    height: 300px;
   }
 }

@@ -19,7 +19,7 @@ export const PostItem = ({ fashions }) => {
         <Box className="postItem" key={fashion.id}>
           <Box className="boxImage">
             <Box className="postItemImage">
-              <img src={fashion.url} />
+              <img src={fashion.url.img3} />
             </Box>
           </Box>
           <Box className="postItemContent">

@@ -1,28 +1,36 @@
-import { Box, Button, CardMedia, Typography } from "@material-ui/core";
-import { ArrowBackTwoTone } from "@material-ui/icons";
-import React, { useLayoutEffect, useState } from "react";
+import { Box, Button, Typography } from "@material-ui/core";
+import { ArrowBack } from "@material-ui/icons";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./DetailBlogTravels.scss";
-import travels from "../../redux/contants/dataTravels";
+import "./DetailBlogFashion.scss";
+import foods from "../../redux/contants/dataFoods";
 
-export const DetailBlogTravel = () => {
+export const DetailBlogFood = () => {
   const [post, setPost] = useState("");
   const params = useParams();
-  useLayoutEffect(() => {
-    const data = travels[params.id - 1];
+  useEffect(() => {
+    const data = foods[params.id - 1];
     setPost(data);
-    document.title = `Travels - ${post.title}`;
+    document.title = `Foods - ${post.title}`;
   });
   return (
-    <Box className="containerTravel">
+    <Box className="containerFashion">
       {post && (
         <>
-          <CardMedia className="detailTitle" image={post.url.img1}>
-            <Typography>{post.date}</Typography>
+          <Box className="detailTitle">
+            <Typography component="span">
+              <img src={post.url.img1} alt="" />
+              <strong>Fashion</strong>
+              {post.date}
+            </Typography>
             <Typography variant="h3" gutterBottom>
               {post ? post.title : ""}
             </Typography>
-          </CardMedia>
+            <Typography>
+              Porter proudly presents the new hotel website template called
+              Berlin.
+            </Typography>
+          </Box>
           <Box className="detailContent">
             <Typography variant="body1">
               {post ? post.body : ""}
@@ -33,7 +41,9 @@ export const DetailBlogTravel = () => {
               space for high quality images that give a tempting impression of
               the hotel and entices future hotel guests to make a reservation.
             </Typography>
-            <img src={post.url.img3} />
+            <Box component="div" className="boxImage">
+              <img src={post.url.img2} />
+            </Box>
             <Typography variant="body1">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
@@ -48,7 +58,10 @@ export const DetailBlogTravel = () => {
               reasonable. The generated Lorem Ipsum is therefore always free
               from repetition, injected humour, or non-characteristic words etc.
             </Typography>
-            <img src={post.url.img2} />
+            <Box component="div" className="boxImage">
+              <img src={post.url.img1} />
+              <img src={post.url.img3} />
+            </Box>
             <Typography variant="body1">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
@@ -68,15 +81,14 @@ export const DetailBlogTravel = () => {
               exact original form, accompanied by English versions from the 1914
               translation by H. Rackham.
             </Typography>
-
-            <Button>
-              <Link to="/blogs">
-                <ArrowBackTwoTone />
-              </Link>
-            </Button>
           </Box>
         </>
       )}
+      <Button>
+        <Link to="/blogs">
+          <ArrowBack />
+        </Link>
+      </Button>
     </Box>
   );
 };

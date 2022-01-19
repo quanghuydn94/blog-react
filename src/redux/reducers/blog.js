@@ -6,14 +6,10 @@ const initialState = {
   error: null,
   fashionPosts: [],
   post: {},
+  foodPosts: [],
 };
 export const blogReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ActionTypes.GET_POSTS:
-      return {
-        ...state,
-        travelPosts: action.payload,
-      };
     case ActionTypes.FETCH_POSTS_REQUEST:
       return {
         ...state,
@@ -33,9 +29,7 @@ export const blogReducer = (state = initialState, action) => {
         error: action.error,
       };
     case ActionTypes.GET_DETAIL_POST:
-      let travelPosts = state.travelPosts;
-      travelPosts = travelPosts.filter((post) => post.id === action.payload.id);
-      return { ...state, post: travelPosts };
+      return { ...state };
     case ActionTypes.FETCH_FASHION_POSTS:
       return {
         ...state,
@@ -43,10 +37,21 @@ export const blogReducer = (state = initialState, action) => {
       };
     case ActionTypes.FETCH_FASHION_POST:
       let fashionPosts = state.fashionPosts;
-      fashionPosts = fashionPosts.filter((post) => post.id === action.payload);
+      fashionPosts = fashionPosts.filter(
+        (fashion) => fashion.id === action.payload
+      );
       return {
         ...state,
         post: fashionPosts,
+      };
+    case ActionTypes.FETCH_FOOD_POSTS:
+      return {
+        ...state,
+        foodPosts: action.payload,
+      };
+    case ActionTypes.FETCH_FOOD_POST:
+      return {
+        ...state,
       };
     default:
       return state;
